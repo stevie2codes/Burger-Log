@@ -1,7 +1,27 @@
 body{
-    background-color: tomato;
-}
+    margin: 0;
+    padding: 0;
+    background-color: rgb(28, 26, 26);
 
+}
+.main{
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.burgerImg{
+    width: 10rem;  
+    
+}
 h1{
-    color: blue;
+    font-family: 'Sigmar One', cursive;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-align: center;
+    justify-content: center;
+    margin: 50px auto;
+    color: white;
 }
