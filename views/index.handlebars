@@ -1,5 +1,15 @@
 
 <h1>Eat-Da-Burger</h1>
+<ul class="burgerList">
+    {{#each burger}}
+        <li>
+            <P>{{this.dataValues.burger_name}}</P>
+           <button type="button" class="destroy" id="destroy" data-id="{{this.id}}">DELETE!</button>
+</li>
+
+       
+    {{/each}}
+</ul>
 <div class="main">
 <img class="burgerImg" src="/images/burger.png" alt="Picture of a big burger">
 </div>
@@ -8,7 +18,7 @@
 
   <div class="form-group">
     <label for="bu"></label>
-    <textarea rows="4" cols="50" type="text" id="bu" name="name" placeholder="Enter a Burger!">
+    <textarea rows="4" cols="50" type="text" id="bu" name="burger_name" placeholder="Enter a Burger!">
     </textarea>
   </div>
 </form>

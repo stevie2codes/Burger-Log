@@ -1,10 +1,32 @@
-$(function(){
+import { identifier } from "@babel/types";
 
-    $(".add").on("click",(event)=>{
+$(function() {
+
+    $(".add").on("click", function(event) {
         event.preventDefault();
-        console.log("clicked");
-    })
+        let newBurger = {
+            burger_name: $("#bu").val().trim(),
+            devoured: false
+        };
+       
+        $.ajax("/api/newBurger", {
+            type: "POST",
+            data: newBurger
+        }).then(function () {
+            console.log("created new burger");
+            location.reload();
+        });
+    });
 
-
-
+$(".destroy").on("click", function(){
+    let id = $(this).data("id");
+    $.ajax("/api/newBurger" + id, {
+        type: "DELETE"
+    }).then(
+        function(){
+            console.log("deleted", id);
+            location.reload();
+        }
+    )
+});
 });

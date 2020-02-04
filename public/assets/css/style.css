@@ -44,6 +44,17 @@ textarea{
     border: black;
     font-family: 'Sigmar One', cursive;
     text-align: center;
-    
-   
+       
+}
+
+.burgerList{
+    list-style-type: none;
+    width: 200px;
+}
+li{
+    margin: 5px;
+    background-color: rgb(44, 40, 40);
+    box-shadow: 2px 2px 4px black;
+    color: white;
+    text-align: center;
 }

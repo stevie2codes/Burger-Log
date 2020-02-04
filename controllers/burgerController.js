@@ -5,6 +5,7 @@ module.exports = function(app){
     app.get("/", function(req, res) {
         Burger.findAll({}).then(function(results) {
           res.render("index",{burger:results});
+          
         });
       });
     //Get all burger names
@@ -15,6 +16,25 @@ module.exports = function(app){
     app.post("/api/newBurger",(req,res)=> {
         Burger.create({
             burger_name: req.body.burger_name
-        }).then((results)=> res.json(results));
+        }).then((results)=>{
+          res.json({id: results.id});
+            res.end()
+        } );
     });
-}
+
+
+    app.delete("/api/newBurger/:id", function(req, res) {
+        console.log("Burger ID:");
+        console.log(req.params.id);
+        Burger.destroy({
+          where: {
+            id: req.params.id
+          }
+        }).then(function() {
+         
+          res.end();
+        });
+      });
+    };
+
+

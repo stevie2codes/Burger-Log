@@ -5,7 +5,10 @@ const sqlzConnect = require('../config/connection.js');
 //Creating a burgur model
 let Burger = sqlzConnect.define("burger", {
     burger_name: Sequelize.STRING,
-    devoured: Sequelize.BOOLEAN
+    devoured: {
+        type: Sequelize.BOOLEAN,
+        default: 0
+    }
 });
 //Syncs to DB
 Burger.sync();
