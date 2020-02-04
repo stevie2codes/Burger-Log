@@ -46,6 +46,7 @@ h1{
     justify-content: center;
     margin: 50px auto;
     color: rgb(255, 237, 237);
+    text-shadow: 8px 8px 5px black,-5px -5px 5px rgb(37, 36, 36) ;
 }
 .toDo{
     color: rgb(255, 237, 237);
@@ -60,10 +61,10 @@ textarea{
     border-radius: 10px;
     color: rgb(245, 221, 221);
     border: rgb(68, 67, 67);
-    font-family: 'Sigmar One', cursive;
+    font-family: 'Bebas Neue', cursive;
     text-align: center;
-    font-size: 1.8rem;
-    width: 380px;      
+    font-size: 1.5rem;
+    width: 350px;      
 }
 textarea:focus{
   outline-color: black;
@@ -71,8 +72,8 @@ textarea:focus{
 }
 .burgerList{
     list-style-type: none;
-    width: 330px;
-    font-family: 'Sigmar One', cursive;
+    width: 300px;
+    font-family: 'Bebas Neue', cursive;
     font-size: 1.5rem;
 
 }
@@ -85,7 +86,7 @@ li{
     text-align: center;
     box-shadow: -6px -6px 16px 0px rgba(46, 45, 45, 0.344), 6px 6px 6px 0px rgba(12, 10, 10, 0.481);
     border-radius: 5px;
-    border: 0.5px solid rgb(34, 32, 32);
+    
 }
 
 
@@ -117,4 +118,10 @@ list-style-type: none;
 width: 330px;
 font-family: 'Sigmar One', cursive;
 font-size: 1.5rem;
+}
+
+
+span, .devouredBurg{
+    font-size: 20px;
+   
 }

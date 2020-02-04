@@ -2,7 +2,7 @@
     <img class="burgerImg" src="/images/burger.png" alt="Picture of a big burger">
 </div>
 <h1>Eat-Da-Burger</h1>
-<ul class="burgerList">
+<ul class="burgerList animated rollIn">
     {{#each burger}}
     {{#unless this.dataValues.devoured}}
     <li>
@@ -16,12 +16,12 @@
     {{/each}}
 </ul>
 
-<ul class="devouredList">
+<ul class="devouredList animated fadeInLeft">
         {{#each burger}}
         {{#if this.dataValues.devoured}}
         <li>
-            <p>Burger Devoured</p>
-        {{this.dataValues.burger_name}}
+            
+      <span>{{this.dataValues.id}}.</span>{{this.dataValues.burger_name}}
            <button type="button" class="destroy" id="destroy" data-id="{{this.dataValues.id}}">DELETE!</button>
         </li>
         {{/if}}
