@@ -1,14 +1,13 @@
-import { identifier } from "@babel/types";
 
-$(function() {
+$(function () {
 
-    $(".add").on("click", function(event) {
+    $(".add").on("click", function (event) {
         event.preventDefault();
         let newBurger = {
             burger_name: $("#bu").val().trim(),
             devoured: false
         };
-       
+
         $.ajax("/api/newBurger", {
             type: "POST",
             data: newBurger
@@ -18,15 +17,16 @@ $(function() {
         });
     });
 
-$(".destroy").on("click", function(){
-    let id = $(this).data("id");
-    $.ajax("/api/newBurger" + id, {
-        type: "DELETE"
-    }).then(
-        function(){
-            console.log("deleted", id);
-            location.reload();
-        }
-    )
-});
+    $(".destroy").on("click", function () {
+        let id = $(this).data("id");
+        alert(id);
+        $.ajax("/api/newBurger/" + id, {
+            type: "DELETE"
+        }).then(
+            function () {
+                console.log("deleted", id);
+                location.reload();
+            }
+        );
+    });
 });
