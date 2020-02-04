@@ -18,9 +18,24 @@ module.exports = function(app){
             burger_name: req.body.burger_name
         }).then((results)=>{
           res.json({id: results.id});
-            res.end()
+            res.status(200).end()
         } );
     });
+
+      //Post Change status of burger
+      app.put("/api/newBurger/:id", (req,res)=>{
+        
+        Burger.findOne({
+          where:{
+            id: req.params.id
+          }
+        }).then(function(result){
+          result.update({
+            devoured: req.body.devoured
+          });   
+          res.status(200).end();
+        });
+      });
 
 
     app.delete("/api/newBurger/:id", function(req, res) {

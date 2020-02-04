@@ -7,9 +7,10 @@ let Burger = sqlzConnect.define("burger", {
     burger_name: Sequelize.STRING,
     devoured: {
         type: Sequelize.BOOLEAN,
-        default: 0
-    }
+        default: false
+    } 
 });
+console.log(Burger);
 //Syncs to DB
 Burger.sync();
 

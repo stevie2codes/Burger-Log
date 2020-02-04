@@ -85,6 +85,7 @@ li{
     text-align: center;
     box-shadow: -6px -6px 16px 0px rgba(46, 45, 45, 0.344), 6px 6px 6px 0px rgba(12, 10, 10, 0.481);
     border-radius: 5px;
+    border: 0.5px solid rgb(34, 32, 32);
 }
 
 
@@ -108,4 +109,12 @@ li{
     transform: scale(1.05);
     font-size: 1.3rem;
     transition: ease 0.2s;
+}
+
+.devouredList{
+margin-left: 60%;
+list-style-type: none;
+width: 330px;
+font-family: 'Sigmar One', cursive;
+font-size: 1.5rem;
 }
