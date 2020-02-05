@@ -1,7 +1,7 @@
 # Burger-Log :hamburger:
  A burger logger with MySQL, Node, Express, Handlebars and Sequelize . Following the MVC design pattern; using Node and MySQL to query and route data into the app, and Handlebars to generate HTML.
 
-[Link-to-Deployed-Application](https://warm-brook-07437.herokuapp.com/)
+### [Link-to-Deployed-Application](https://warm-brook-07437.herokuapp.com/)
 ![preview](public/images/preview.png)
 
 ## Functionality
