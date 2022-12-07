@@ -19,7 +19,7 @@
   "homepage": "https://github.com/stevie2codes/Burger-Log#readme",
   "dependencies": {
     "animate.css": "^3.7.2",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
